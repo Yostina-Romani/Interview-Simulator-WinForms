@@ -87,4 +87,3 @@ git clone https://github.com/USERNAME/Interview-Simulator-WinForms.git
 
 ---
 
-تحبي أعملهولك النسخة دي؟
