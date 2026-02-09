@@ -68,7 +68,7 @@ INSERT INTO user(username, pass) VALUES('admin', '1234');
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/USERNAME/Interview-Simulator-WinForms.git
+git clone (https://github.com/Yostina-Romani/Interview-Simulator-WinForms.git)
 ```
 
 2. Open the solution in **Visual Studio**
