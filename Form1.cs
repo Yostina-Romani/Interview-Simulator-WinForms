@@ -16,6 +16,8 @@ namespace interview_simulator
     {
         string connStr = "server=localhost;port=3306;database=interview_simulator;uid=root;pwd=;";
        public int i = 1;
+        bool interviewStarted = false;
+
         void show_question()
         {
            
@@ -35,13 +37,18 @@ namespace interview_simulator
             }
             else
             {
-                button1.Enabled = false;
-                textBox1.Enabled = false;
-                button2.Enabled = false;
-                MessageBox.Show("No more questions");
-                button4.Visible = true;
+                if (interviewStarted)
+                {
+                    button1.Enabled = false;
+                    textBox1.Enabled = false;
+                    button2.Enabled = false;
+                    MessageBox.Show("No more questions");
+                    button4.Visible = true;
+                }
             }
-                reader.Close();
+
+
+            reader.Close();
             conn.Close();
         }
 
@@ -79,7 +86,7 @@ namespace interview_simulator
         {
 
             hide();
-            show_question();
+            
             button5.Enabled = true;
         }
 
@@ -131,7 +138,10 @@ namespace interview_simulator
 
         private void button3_Click(object sender, EventArgs e)
         {
+            interviewStarted = true; // start
+            i = 1;
             show();
+            show_question();
         }
 
         private void button2_Click(object sender, EventArgs e)
